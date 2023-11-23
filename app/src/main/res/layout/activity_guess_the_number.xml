@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".GuessTheNumberActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/ahganirya"
+        android:text="@string/guess_the_number"
+        android:textColor="@color/secondary"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/perpetua"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:text="@string/we_re_going_to_attack_on_earth_guess_the_number_to_save_the_world"
+        android:textAlignment="center"
+        android:textColor="@color/secondary"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/perpetua"
+        android:text="@string/number_is_between_1_100"
+        android:textColor="@color/secondary"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/secondary"
+        app:boxStrokeColor="@color/secondary"
+        app:hintTextColor="@color/secondary"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/guessBtn"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/guessET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/perpetua"
+            android:hint="@string/_00"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/secondary"
+            android:textColorHint="@color/secondary"
+            android:textSize="22sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/guessBtn"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/perpetua"
+        android:text="@string/guess"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/guessesLeftTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/perpetua"
+        android:text="@string/you_have_10_guesses_left"
+        android:textColor="@color/secondary"
+        android:textSize="22sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/guessBtn"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/low_high_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/perpetua"
+        android:text="@string/too_low_try_again"
+        android:textColor="@color/secondary"
+        android:textSize="22sp"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/guessesLeftTV"
+        app:layout_constraintStart_toStartOf="@+id/guessesLeftTV"
+        app:layout_constraintTop_toBottomOf="@+id/guessesLeftTV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

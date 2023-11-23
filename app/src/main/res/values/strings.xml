@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Two In One Game</string>
+    <string name="rock_paper_scissor">Rock Paper Scissor</string>
+    <string name="guess_the_number">Guess The Number</string>
+    <string name="cute_bot_choice_is">Cute Bot choice is</string>
+    <string name="we_re_going_to_attack_on_earth_guess_the_number_to_save_the_world">We\'re going to attack on earth guess the number to save the world</string>
+    <string name="_00">00</string>
+    <string name="guess">Guess</string>
+    <string name="you_have_10_guesses_left">You have 10 guesses left</string>
+    <string name="number_is_between_1_100">Number is between 1 - 100</string>
+    <string name="too_low_try_again">Too Low! Try Again</string>
+    <string name="success">Success</string>
+</resources>
